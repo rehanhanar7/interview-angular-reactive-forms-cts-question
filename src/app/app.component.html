@@ -1,0 +1,18 @@
+<h1>Form that enable and disable on changing the select input</h1>
+
+<form #formref1="ngForm">
+  <label>Is the Fields Required ? </label>
+  <select name="requiredstatus" id="requiredstatus" [(ngModel)]= "requiredstatus">
+    <option value="true">Yes</option>
+    <option value="false">No</option>
+  </select>
+  <label>Entername 
+  <input type="text" ngModel name="username" #username="ngModel" [required]="requiredstatus"/>
+  </label>
+  <button type="submit" [disabled]="!username.valid"> Submit Button</button>
+</form>
+<hr>
+<form #formref2="ngForm">
+
+</form>
+<hr>
